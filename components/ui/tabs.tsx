@@ -10,7 +10,7 @@ interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
-  ({ value, onValueChange, className = "", children, ...props }, ref) => {
+  ({ value,  className = "", children, ...props }, ref) => {
     return (
       <div className={`tabs ${className}`} ref={ref} {...props} data-value={value}>
         {children}

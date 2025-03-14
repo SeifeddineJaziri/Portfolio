@@ -14,7 +14,7 @@ export default function MainScene() {
   const [clicked, setClicked] = useState(false)
 
   // Animate the sphere on hover
-  useFrame((state, delta) => {
+  useFrame((state) => {
     if (groupRef.current) {
       groupRef.current.rotation.y = state.clock.elapsedTime * 0.05
     }

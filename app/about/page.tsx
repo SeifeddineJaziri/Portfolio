@@ -158,7 +158,7 @@ export default function AboutPage() {
                 I&apos;m a versatile developer specializing in AI, computer vision, and full-stack development. With expertise in both front-end and back-end technologies, I create innovative solutions that leverage cutting-edge AI capabilities to solve real-world problems.
                 </p>
                 <p className="section-text">
-                  My work spans from developing advanced vehicle detection systems with YOLO architecture to creating intuitive interfaces for complex AI applications. I'm passionate about building technology that enhances efficiency, improves user experiences, and delivers measurable results across various domains.
+                  My work spans from developing advanced vehicle detection systems with YOLO architecture to creating intuitive interfaces for complex AI applications. I&apos;m passionate about building technology that enhances efficiency, improves user experiences, and delivers measurable results across various domains.
                 </p>
               </motion.div>
 

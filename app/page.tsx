@@ -396,7 +396,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="cta-description"
           >
-            Let's collaborate on your next AI or software project and create innovative technology that solves
+            Let&apos;s collaborate on your next AI or software project and create innovative technology that solves
             real-world problems.
           </motion.p>
 

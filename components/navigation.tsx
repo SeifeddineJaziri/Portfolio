@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const links = [
     { href: "#about", label: "About" },
@@ -22,17 +22,19 @@ export function Navigation() {
     { href: "#projects", label: "Projects" },
     { href: "#skills", label: "Skills" },
     { href: "#contact", label: "Contact" },
-  ]
+  ];
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-card/80 backdrop-blur-md border-b border-border" : "bg-transparent"
+        isScrolled
+          ? "bg-card/80 backdrop-blur-md border-b border-border"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="#" className="text-2xl font-bold text-primary">
-          SJ
+        <a href="#" className="flex items-center">
+          <img src="/Portofilio.png" alt="SJ Logo" className="h-8 w-8" />
         </a>
 
         {/* Desktop Navigation */}
@@ -47,14 +49,17 @@ export function Navigation() {
             </a>
           ))}
           <Button asChild size="sm" className="bg-primary hover:bg-primary/90">
-            <a href="https://portfolioseif.vercel.app/" target="_blank" rel="noopener noreferrer">
+            <a href="/CvEnSeif.pdf" download>
               Resume
             </a>
           </Button>
         </div>
 
         {/* Mobile Menu Button */}
-        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-foreground">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-foreground"
+        >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -73,8 +78,12 @@ export function Navigation() {
                 {link.label}
               </a>
             ))}
-            <Button asChild size="sm" className="bg-primary hover:bg-primary/90 w-full">
-              <a href="https://portfolioseif.vercel.app/" target="_blank" rel="noopener noreferrer">
+            <Button
+              asChild
+              size="sm"
+              className="bg-primary hover:bg-primary/90 w-full"
+            >
+              <a href="/CvEnSeif.pdf" download>
                 Resume
               </a>
             </Button>
@@ -82,5 +91,5 @@ export function Navigation() {
         </div>
       )}
     </nav>
-  )
+  );
 }

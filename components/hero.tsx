@@ -1,17 +1,19 @@
-"use client"
+"use client";
 
-import { Github, Linkedin, Mail } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Github, Linkedin, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 pt-20">
-      <div className="container mx-auto text-center">
+    <section className="min-h-screen flex items-center justify-center px-8 pt-20">
+      <div className="w-full text-center">
         <div className="inline-block animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent text-balance">
             Seifeddine JAZIRI
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-2">Software Engineer</p>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-2">
+            Software Engineer
+          </p>
           <p className="text-lg text-muted-foreground/80 mb-8 max-w-2xl mx-auto text-pretty">
             Specializing in Computer Vision, AI/ML, and Full-stack Development
           </p>
@@ -52,5 +54,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }

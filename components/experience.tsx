@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const experiences = [
   {
@@ -44,15 +44,17 @@ const experiences = [
       "Developed frontend using React.js for educational platform",
     ],
   },
-]
+];
 
 export function Experience() {
   return (
-    <section id="experience" className="py-20 px-4">
-      <div className="container mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Experience</h2>
+    <section id="experience" className="py-20 px-8">
+      <div className="w-full">
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+          Experience
+        </h2>
 
-        <div className="max-w-4xl mx-auto space-y-6">
+        <div className="space-y-6">
           {experiences.map((exp, idx) => (
             <Card
               key={idx}
@@ -60,7 +62,9 @@ export function Experience() {
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div>
-                  <h3 className="text-xl font-semibold text-card-foreground mb-1">{exp.title}</h3>
+                  <h3 className="text-xl font-semibold text-card-foreground mb-1">
+                    {exp.title}
+                  </h3>
                   <p className="text-primary">{exp.company}</p>
                 </div>
                 <Badge variant="secondary" className="mt-2 md:mt-0">
@@ -69,7 +73,10 @@ export function Experience() {
               </div>
               <ul className="space-y-2">
                 {exp.projects.map((project, pIdx) => (
-                  <li key={pIdx} className="text-sm text-muted-foreground flex items-start gap-2">
+                  <li
+                    key={pIdx}
+                    className="text-sm text-muted-foreground flex items-start gap-2"
+                  >
                     <span className="text-primary mt-1">•</span>
                     <span>{project}</span>
                   </li>
@@ -80,5 +87,5 @@ export function Experience() {
         </div>
       </div>
     </section>
-  )
+  );
 }

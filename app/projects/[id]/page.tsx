@@ -126,7 +126,7 @@ export default function ProjectPage() {
           <div className="space-y-4">
             {/* Video Player */}
             <div className="aspect-video bg-black rounded-lg overflow-hidden">
-              <video className="w-full h-full" controls autoPlay loop>
+              <video className="w-full h-full" controls autoPlay loop muted>
                 <source src={currentProject.videoPath} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
